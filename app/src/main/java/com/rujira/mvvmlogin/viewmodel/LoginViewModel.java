@@ -1,4 +1,4 @@
-package com.rujira.mvvmlogin.ViewModel;
+package com.rujira.mvvmlogin.viewmodel;
 
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -7,7 +7,7 @@ import android.view.View;
 import androidx.lifecycle.ViewModel;
 
 import com.rujira.mvvmlogin.Interface.LoginResultCallBacks;
-import com.rujira.mvvmlogin.Model.User;
+import com.rujira.mvvmlogin.model.User;
 
 public class LoginViewModel extends ViewModel {
     private User user;

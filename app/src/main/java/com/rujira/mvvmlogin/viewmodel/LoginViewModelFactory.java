@@ -1,9 +1,8 @@
-package com.rujira.mvvmlogin.ViewModel;
+package com.rujira.mvvmlogin.viewmodel;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProviders;
 
 import com.rujira.mvvmlogin.Interface.LoginResultCallBacks;
 

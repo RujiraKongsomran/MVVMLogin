@@ -1,4 +1,4 @@
-package com.rujira.mvvmlogin.Model;
+package com.rujira.mvvmlogin.model;
 
 import android.text.TextUtils;
 import android.util.Patterns;
