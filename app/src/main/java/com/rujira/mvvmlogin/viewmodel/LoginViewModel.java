@@ -60,10 +60,15 @@ public class LoginViewModel extends ViewModel {
 
     // Write method to process Login
     public void onLoginClicked(View view) {
-        if (user.isValidData()) {
-            loginResultCallBacks.onSuccess("Login Success!");
+        int errorCode = user.isValidData();
+        if (errorCode == 0) {
+            loginResultCallBacks.onError("You must enter email address");
+        } else if (errorCode == 1) {
+            loginResultCallBacks.onError("Your email is invalid");
+        } else if (errorCode == 2) {
+            loginResultCallBacks.onError("Password length must greater than 6 characters");
         } else {
-            loginResultCallBacks.onError("Login Error!");
+            loginResultCallBacks.onSuccess("Login success");
         }
     }
 }

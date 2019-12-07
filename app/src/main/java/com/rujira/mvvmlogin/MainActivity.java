@@ -28,13 +28,13 @@ public class MainActivity extends AppCompatActivity implements LoginResultCallBa
 
     @Override
     public void onSuccess(String message) {
-        Toasty.success(this, "Login success", Toast.LENGTH_SHORT)
+        Toasty.success(this, message, Toast.LENGTH_SHORT)
                 .show();
     }
 
     @Override
     public void onError(String message) {
-        Toasty.error(this, "Login error", Toast.LENGTH_SHORT)
+        Toasty.error(this, message, Toast.LENGTH_SHORT)
                 .show();
     }
 }

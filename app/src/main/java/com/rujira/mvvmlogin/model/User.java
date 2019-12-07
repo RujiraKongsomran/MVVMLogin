@@ -36,9 +36,15 @@ public class User extends BaseObservable {
         this.password = password;
     }
 
-    public boolean isValidData() {
-        return !TextUtils.isEmpty(getEmail()) &&
-                Patterns.EMAIL_ADDRESS.matcher(getEmail()).matches() &&
-                getPassword().length() > 6;
+    public int isValidData() {
+        if (TextUtils.isEmpty(getEmail())) {
+            return 0;
+        } else if (!Patterns.EMAIL_ADDRESS.matcher(getEmail()).matches()) {
+            return 1;
+        } else if (getPassword().length() < 6) {
+            return 2;
+        } else {
+            return -1;
+        }
     }
 }
